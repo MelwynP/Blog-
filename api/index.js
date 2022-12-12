@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
     cb(null, "images");
   },
   filename: (req, file, cb) => {
-    cb(null, "test4.jpg");
+    cb(null, req.body.name);
   },
 });
 // a l'interieur de storage j'indique ma destination qui va prendre
